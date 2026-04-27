@@ -1,0 +1,5 @@
+sed user avg: 0.00070
+head_tail user avg: 0.00080
+awk user avg: 0.00160
+tail_head user avg: 0.00180
+cat_awk user avg: 0.00370

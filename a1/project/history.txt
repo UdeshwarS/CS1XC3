@@ -1,0 +1,50 @@
+  166  nl -ba owl.txt | sed -n '1,120p'
+  167  sed -i 's/$//' owl.txt
+  168  cat -n owl.txt
+  169  cd ~/cs1xc3/a1/ascii
+  170  sed -i '1s@/\\_\\@/\\_/\\@' owl.txt
+  171  sed -i '2c\((ovo))' owl.txt
+  172  sed -i '3c\():::()' owl.txt
+  173  sed -i '3a\ VV-VV' owl.txt
+  174  cat -n owl.txt
+  175  nano ascii_submission.md
+  176  cd ~/cs1xc3
+  177  git add a1/ascii/ascii_submission.md a1/ascii/owl.txt
+  178  git commit -m "Complete A1 Part III (ascii)"
+  179  git push
+  180  cd ~/cs1xc3/a1/books
+  181  ls -1 *_times.txt
+  182  cd ~/cs1xc3/a1/books
+  183  : > real_avgs.txt
+  184  for f in sed_times.txt tail_head_times.txt head_tail_times.txt cat_awk_times.txt awk_times.txt; do   ./compute_avg_time.sh real "$f" >> real_avgs.txt; done
+  185  sort -k4 -n real_avgs.txt > real_avgs_sorted.txt
+  186  : > user_avgs.txt
+  187  for f in sed_times.txt tail_head_times.txt head_tail_times.txt cat_awk_times.txt awk_times.txt; do   ./compute_avg_time.sh user "$f" >> user_avgs.txt; done
+  188  sort -k4 -n user_avgs.txt > user_avgs_sorted.txt
+  189  : > sys_avgs.txt
+  190  for f in sed_times.txt tail_head_times.txt head_tail_times.txt cat_awk_times.txt awk_times.txt; do   ./compute_avg_time.sh sys "$f" >> sys_avgs.txt; done
+  191  sort -k4 -n sys_avgs.txt > sys_avgs_sorted.txt
+  192  ls -1 *_avgs*.txt
+  193  echo "---- real_avgs_sorted.txt ----"; cat real_avgs_sorted.txt
+  194  echo "---- user_avgs_sorted.txt ----"; cat user_avgs_sorted.txt
+  195  echo "---- sys_avgs_sorted.txt ----";  cat sys_avgs_sorted.txt
+  196  cd ~/cs1xc3
+  197  git add a1/books/*_times.txt a1/books/*_avgs*.txt
+  198  git commit -m "Add A1 books timing averages"
+  199  git push
+  200  cd ~/cs1xc3/a1
+  201  grep -n "Part 2\. Find Pipelines" -n fs_submission.md
+  202  grep -n "sorted by size" -n fs_submission.md
+  203  sed -n '1,260p' fs_submission.md | nl -ba | sed -n '150,260p'
+  204  cd ~/cs1xc3/a1/find_test
+  205  find . -type f -name "*" | xargs -I {} ls -l
+  206  find . -type f -name "*" | xargs -I {} ls -l {}
+  207  cd ~/cs1xc3/a1
+  208  nano fs_submission.md
+  209  cd ~/cs1xc3
+  210  git add a1/fs_submission.md
+  211  git commit -m "Fix A1 fs submission Part 2 Q3 outputs"
+  212  git push
+  213  cd ~/cs1xc3/a1
+  214  mkdir -p project
+  215  history | tail -n 50 > project/history.txt

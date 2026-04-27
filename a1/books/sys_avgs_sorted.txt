@@ -1,0 +1,5 @@
+sed sys avg: 0.00170
+tail_head sys avg: 0.00320
+awk sys avg: 0.00330
+head_tail sys avg: 0.00340
+cat_awk sys avg: 0.00610

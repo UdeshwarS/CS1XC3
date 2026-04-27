@@ -1,0 +1,5 @@
+sed real avg: 0.00350
+tail_head real avg: 0.00410
+head_tail real avg: 0.00340
+cat_awk real avg: 0.00850
+awk real avg: 0.00560

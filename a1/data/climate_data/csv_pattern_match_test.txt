@@ -1,0 +1,1 @@
+<img src="/icons/text.gif" alt="[TXT]"> <a href="climate_daily_ON_6153192_1958_P1D.csv">climate_daily_ON_6153192_1958_P1D.csv</a>    2025-03-13 13:08   55K
